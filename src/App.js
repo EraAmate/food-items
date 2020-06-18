@@ -7,6 +7,9 @@ function App() {
   return (
     <>
       <GlobalStyles />
+      <ThemeProvider theme={theme}>
+        <Home />
+      </ThemeProvider>
       <ThemeProvider theme={theme}></ThemeProvider>
     </>
   );
