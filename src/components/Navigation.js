@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 const NavList = styled.ul`
+  cursor: pointer;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -10,12 +11,14 @@ const NavList = styled.ul`
   align-self: innerhit;
   color: ${(props) => props.theme.colors.textPrimary};
 `;
+
 const Link = styled.li`
   font-size: 0.9rem;
   margin-left: 10px;
   color: ${(props) => props.theme.colors.textPrimary};
-  :hover {
+  :active {
     text-decoration: underline;
+    color: ${(props) => props.theme.colors.basic};
   }
 `;
 

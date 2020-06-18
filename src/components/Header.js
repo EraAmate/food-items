@@ -18,6 +18,7 @@ const Title = styled.h1`
   padding: 0;
   text-transform: capitalize;
   color: ${(props) => props.theme.colors.textPrimary};
+  text-shadow: 0.8px 0.8px;
 `;
 
 let navs = [

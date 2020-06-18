@@ -8,7 +8,7 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: ${(props) => props.theme.colors.bgPrimary};
+  background: ${(props) => props.theme.colors.bgSecondary};
 `;
 
 const Home = () => {
