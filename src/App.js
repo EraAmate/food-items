@@ -2,7 +2,6 @@ import React from 'react';
 import GlobalStyles from './GlobalStyles';
 import { ThemeProvider } from 'emotion-theming';
 import theme from './theme';
-import Home from './components/pages/Home';
 
 function App() {
   return (
@@ -11,6 +10,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Home />
       </ThemeProvider>
+      <ThemeProvider theme={theme}></ThemeProvider>
     </>
   );
 }
