@@ -30,5 +30,5 @@ function ItemCards({ items }) {
 export default ItemCards;
 
 ItemCards.propTypes = {
-  items: PropTypes.any
+  items: PropTypes.object
 };
