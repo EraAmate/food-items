@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Header from '../components/Header';
+import ItemCards from '../components/ItemCards';
 import { mockItems } from '../db';
 import Filter from '../components/Filter';
 
@@ -43,6 +44,8 @@ const Home = () => {
           text3="veggie"
           onClick={filterItems}
         />
+
+        <ItemCards items={items} />
       </Main>
     </>
   );
