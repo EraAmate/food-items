@@ -5,6 +5,7 @@ import Navigation from './Navigation';
 
 const HeaderContainer = styled.header`
   display: flex;
+  flex-flow: wrap;
   justify-content: space-between;
   height: 150px;
   width: 100%;

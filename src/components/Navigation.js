@@ -12,11 +12,11 @@ const NavList = styled.ul`
   color: ${(props) => props.theme.colors.textPrimary};
 `;
 
-const Link = styled.li`
+const Link = styled.a`
   font-size: 0.9rem;
   margin-left: 10px;
   color: ${(props) => props.theme.colors.textPrimary};
-  :active {
+  :hover {
     text-decoration: underline;
     color: ${(props) => props.theme.colors.basic};
   }
@@ -24,7 +24,7 @@ const Link = styled.li`
 
 function Navigation({ navItems = [] }) {
   return (
-    <>
+    <nav>
       <NavList>
         {navItems.map((nav) => {
           return (
@@ -34,7 +34,7 @@ function Navigation({ navItems = [] }) {
           );
         })}
       </NavList>
-    </>
+    </nav>
   );
 }
 export default Navigation;
