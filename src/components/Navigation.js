@@ -26,9 +26,9 @@ function Navigation({ navItems = [] }) {
   return (
     <nav>
       <NavList>
-        {navItems.map((nav) => {
+        {navItems.map((nav, i) => {
           return (
-            <li key={nav.key}>
+            <li key={i}>
               <Link href={nav.link}>{nav.name}</Link>
             </li>
           );
