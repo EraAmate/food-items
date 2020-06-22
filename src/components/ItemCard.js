@@ -4,6 +4,10 @@ import styled from '@emotion/styled';
 
 const Category = styled.p`
   align-self: center;
+  background: ${(props) => props.color};
+  padding: 1px 5px 1px 5px;
+  border-radius: 15px;
+  color: ${(props) => props.theme.colors.basic};
 `;
 const CardBody = styled.section`
   padding: 0 8px 8px 8px;
@@ -21,13 +25,20 @@ const Img = styled.img`
   width: 100%;
   object-fit: cover;
 `;
+const Summary = styled.summary`
+  border-top: 1px solid ${(props) => props.theme.colors.bgPrimary};
+  outline: none;
+  cursor: pointer;
+  padding-top: 10px;
+  margin-top: 40px;
+`;
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   background: ${(props) => props.theme.colors.basic};
 `;
 
-function ItemCard({ name, category, article, info, src }) {
+function ItemCard({ name, category, article, info, src, color }) {
   return (
     <>
       <CardContainer>
@@ -35,11 +46,11 @@ function ItemCard({ name, category, article, info, src }) {
         <CardBody>
           <Section>
             <H2>{name}</H2>
-            <Category>{category}</Category>
+            <Category color={color}>{category}</Category>
           </Section>
           <div>{article}</div>
           <details>
-            <summary>More Info</summary>
+            <Summary>More Info</Summary>
             <p>{info}</p>
           </details>
         </CardBody>
@@ -54,5 +65,6 @@ ItemCard.propTypes = {
   category: PropTypes.string,
   article: PropTypes.string,
   info: PropTypes.string,
-  src: PropTypes.string
+  src: PropTypes.string,
+  color: PropTypes.string
 };

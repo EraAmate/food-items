@@ -12,7 +12,7 @@ const NavList = styled.ul`
   color: ${(props) => props.theme.colors.textPrimary};
 `;
 
-const Link = styled.li`
+const Link = styled.a`
   font-size: 0.9rem;
   margin-left: 10px;
   color: ${(props) => props.theme.colors.textPrimary};
@@ -24,17 +24,18 @@ const Link = styled.li`
 
 function Navigation({ navItems = [] }) {
   return (
-    <>
+    <nav>
       <NavList>
-        {navItems.map((nav) => {
+        {navItems.map((nav, i) => {
           return (
-            <li key={nav.key}>
+            <li key={i}>
+
               <Link href={nav.link}>{nav.name}</Link>
             </li>
           );
         })}
       </NavList>
-    </>
+    </nav>
   );
 }
 export default Navigation;

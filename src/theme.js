@@ -1,7 +1,7 @@
 const theme = {
   colors: {
-    bgPrimary: ' #bbd0c4',
-    bgSecondary: '#f4f4f4',
+    bgPrimary: '#6E9763',
+    bgSecondary: '#E8E7E3',
     basic: '#FFFFFF',
     textPrimary: '#171615',
     btnVeggie: '#0C8A00',
