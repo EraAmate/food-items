@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 
 const CardsWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: auto;
   grid-gap: 2rem;
 `;
@@ -24,7 +24,7 @@ function ItemCards({ items }) {
         return (
           <ItemCard
             src={item.src}
-            key={item.key}
+            key={i}
             name={item.name}
             category={item.category}
             article={item.article}
