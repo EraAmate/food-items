@@ -18,9 +18,9 @@ const Main = styled.div`
 const Home = () => {
   const [items, setItems] = React.useState(mockItems);
   const [filters, setFilters] = React.useState([
-    { isChecked: true, name: 'meat', color: 'red' },
-    { isChecked: true, name: 'fruits', color: 'orange' },
-    { isChecked: true, name: 'veggie', color: 'green' }
+    { isChecked: false, name: 'meat', color: 'red' },
+    { isChecked: false, name: 'fruits', color: 'orange' },
+    { isChecked: false, name: 'veggie', color: 'green' }
   ]);
   const allItems = mockItems;
 
@@ -35,18 +35,23 @@ const Home = () => {
 
     setFilters(newFilters);
 
-    const activeFilters = filters.map((filter) => {
-      if (filter.isChecked) return filter.name;
-    });
+    const activeFilters = filters.reduce((acc, filter) => {
+      if (filter.isChecked) {
+        acc.push(filter.name);
+      }
+      return acc;
+    }, []);
 
     const filteredItems = activeFilters.reduce((acc, value) => {
       const filteredItems = allItems.filter(filterBy(value));
-      // Possible Improvment, sort so that the last clicked filtered items show up first
-      //filteredItems.sort((a, b) => a.category.localeCompare(b.category));
       return [...acc, ...filteredItems];
     }, []);
 
     setItems(filteredItems);
+
+    if (activeFilters.length === 0) {
+      setItems(allItems);
+    }
   }
 
   const filterBy = (category) => (item) => {

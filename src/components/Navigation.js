@@ -10,11 +10,14 @@ const NavList = styled.ul`
   text-decoration: none;
   align-self: innerhit;
   color: ${(props) => props.theme.colors.textPrimary};
+  margin: 0;
+  padding: 0;
 `;
-
+const List = styled.li`
+  margin-right: 10px;
+`;
 const Link = styled.a`
   font-size: 0.9rem;
-  margin-left: 10px;
   color: ${(props) => props.theme.colors.textPrimary};
   :active {
     text-decoration: underline;
@@ -28,10 +31,9 @@ function Navigation({ navItems = [] }) {
       <NavList>
         {navItems.map((nav, i) => {
           return (
-            <li key={i}>
-
+            <List key={i}>
               <Link href={nav.link}>{nav.name}</Link>
-            </li>
+            </List>
           );
         })}
       </NavList>
