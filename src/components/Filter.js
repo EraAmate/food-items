@@ -36,6 +36,7 @@ const Filter = ({ filters = [], onChange }) => {
           </CheckboxSection>
         );
       })}
+
     </Container>
   );
 };

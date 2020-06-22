@@ -16,7 +16,7 @@ const Link = styled.a`
   font-size: 0.9rem;
   margin-left: 10px;
   color: ${(props) => props.theme.colors.textPrimary};
-  :hover {
+  :active {
     text-decoration: underline;
     color: ${(props) => props.theme.colors.basic};
   }
@@ -29,6 +29,7 @@ function Navigation({ navItems = [] }) {
         {navItems.map((nav, i) => {
           return (
             <li key={i}>
+
               <Link href={nav.link}>{nav.name}</Link>
             </li>
           );

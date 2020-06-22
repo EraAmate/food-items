@@ -58,7 +58,6 @@ const Home = () => {
       <Header brandname="Brandname" />
       <Main>
         <Filter filters={filters} onChange={filterItems} />
-
         <ItemCards items={items} />
       </Main>
     </>

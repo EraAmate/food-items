@@ -24,7 +24,7 @@ function ItemCards({ items }) {
         return (
           <ItemCard
             src={item.src}
-            key={i}
+            key={item.key}
             name={item.name}
             category={item.category}
             article={item.article}
